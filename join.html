@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Us – ACM RIT</title>
+  <link rel="icon" type="image/png" href="acmrit-removebg-preview.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="acmrit-removebg-preview.png" alt="ACM Logo" style="height:56px;width:56px;object-fit:contain;" />
+      <span>ACM <span style="color:var(--muted);font-weight:400;">RIT</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="join.html" class="nav-cta">Join Us</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    
+    <h1>Join ACM RIT</h1>
+    <p>Be a founding member of ACM RIT Student Chapter. Open to all RIT students — no experience required.</p>
+  </div>
+
+  <div id="successBanner" style="display:none;background:rgba(63,185,80,0.12);border:1px solid rgba(63,185,80,0.3);color:#3fb950;padding:1rem 5%;text-align:center;font-weight:600;">
+    Application submitted successfully! We'll get back to you soon.
+  </div>
+
+  <!-- WHY JOIN + BENEFITS -->
+  <section>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="fade-in join-grid">
+      <div>
+        <div class="section-label">Why Join?</div>
+        <h2 class="section-title">What You Get</h2>
+        <div style="margin-top:1.5rem;">
+          <div class="benefit-item">
+            <div class="benefit-icon">🚀</div>
+            <div>
+              <h4>Skill Development</h4>
+              <p>Access to exclusive workshops, coding bootcamps, and hands-on sessions on the latest technologies.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🏆</div>
+            <div>
+              <h4>Hackathons & Competitions</h4>
+              <p>Participate in internal and external hackathons with team support, mentoring, and prizes.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🤝</div>
+            <div>
+              <h4>Networking</h4>
+              <p>Connect with like-minded peers, seniors, alumni, and industry professionals.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📚</div>
+            <div>
+              <h4>Mentorship</h4>
+              <p>Get guidance from senior members and faculty on academics, projects, and career paths.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">💼</div>
+            <div>
+              <h4>Career Opportunities</h4>
+              <p>Resume reviews, mock interviews, internship referrals, and placement preparation support.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🌐</div>
+            <div>
+              <h4>ACM Global Access</h4>
+              <p>Access to ACM's digital library, research papers, and global student community resources.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div>
+        <div class="card" style="padding:2rem;">
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.3rem;">Member Registration</h3>
+          <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1.5rem;">Fill in your details to apply for membership. We'll get back to you shortly.</p>
+
+          <form id="joinForm" action="submit.php" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" name="first_name" placeholder="Your first name" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" name="last_name" placeholder="Your last name" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Register Number *</label>
+              <input type="text" name="register_number" placeholder="e.g. 211721234567" pattern="21172[0-9]{7}" title="Register number must be 12 digits starting with 21172" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Department *</label>
+                <select name="department" required>
+                  <option value="" disabled selected>Select dept.</option>
+                  <option value="CSE">CSE</option>
+                  <option value="CSBS">CSBS</option>
+                  <option value="AIML">AIML</option>
+                  <option value="AIDS">AIDS</option>
+                  <option value="CCE">CCE</option>
+                  <option value="Mechanical">Mechanical</option>
+                  <option value="Biotech">Biotech</option>
+                  <option value="ECE">ECE</option>
+                  <option value="EE-VLSI">EE-VLSI</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Section *</label>
+                <input type="text" name="section" placeholder="e.g. A, B, C" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Year *</label>
+                <select name="year" required>
+                  <option value="" disabled selected>Select year</option>
+                  <option>1st Year</option>
+                  <option>2nd Year</option>
+                  <option>3rd Year</option>
+                  <option>4th Year</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email ID *</label>
+              <input type="email" name="email" placeholder="yourname@cse.ritchennai.edu.in" pattern="[a-zA-Z0-9._%+\-]+@[a-z]+\.ritchennai\.edu\.in" title="Email must end with @dept.ritchennai.edu.in" required />
+            </div>
+            <div class="form-group">
+              <label>Area of Interest</label>
+              <select name="interest">
+                <option value="" disabled selected>Select interest</option>
+                <option>Web Development</option>
+                <option>App Development</option>
+                <option>AI / Machine Learning</option>
+                <option>Data Science</option>
+                <option>Cybersecurity</option>
+                <option>Cloud Computing</option>
+                <option>Competitive Programming</option>
+                <option>Open Source</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Why do you want to join ACM RIT?</label>
+              <textarea name="reason" placeholder="Tell us a bit about yourself and your motivation..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit Application →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WHO CAN JOIN -->
+  <section>
+    <div class="section-header center fade-in">
+      <div class="section-label">Eligibility</div>
+      <h2 class="section-title">Who Can Join?</h2>
+      <p class="section-sub">ACM RIT is open to every student at Rajalakshmi Institute of Technology.</p>
+    </div>
+    <div class="grid-3 fade-in">
+      <div class="card" style="text-align:center;">
+        <div class="card-icon">🎓</div>
+        <h3>Any Year</h3>
+        <p>1st year to 4th year — everyone is welcome. The earlier you join, the more you gain.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon">🏫</div>
+        <h3>Any Department</h3>
+        <p>CSE, IT, ECE, Mechanical — tech is for everyone. No department restrictions.</p>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="card-icon">💡</div>
+        <h3>Any Skill Level</h3>
+        <p>Complete beginner or experienced coder — we have something for everyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 768px) {
+      .join-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-weight:700;font-size:1.1rem;">ACM <span style="color:var(--accent);">RIT</span></div>
+        <p>ACM Student Chapter at Rajalakshmi Institute of Technology, Chennai.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="mailto:acm@rit.ac.in">acm@rit.ac.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ACM Student Chapter – Rajalakshmi Institute of Technology</p>
+      
+    </div>
+  </footer>
+
+  <!-- SUCCESS POPUP -->
+  <div id="successPopup" style="display:none;position:fixed;inset:0;z-index:99999;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem 2rem;text-align:center;max-width:420px;width:90%;animation:popupIn 0.3s ease;">
+      <div style="width:56px;height:56px;border-radius:50%;background:rgba(63,185,80,0.15);border:1px solid rgba(63,185,80,0.4);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.6rem;">Application Received!</h3>
+      <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;">Thank you for applying to ACM RIT. Our team will review your application and send you further updates regarding joining shortly.</p>
+      <button onclick="document.getElementById('successPopup').style.display='none'" class="btn btn-primary" style="margin-top:1.5rem;width:100%;">Got it</button>
+    </div>
+  </div>
+
+  <style>
+    @keyframes popupIn {
+      from { opacity:0; transform:scale(0.9) translateY(20px); }
+      to   { opacity:1; transform:scale(1) translateY(0); }
+    }
+  </style>
+
+  <script src="script.js"></script>
+  <script>
+    if (new URLSearchParams(location.search).get('status') === 'success') {
+      document.getElementById('successBanner').style.display = 'block';
+      document.getElementById('successPopup').style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

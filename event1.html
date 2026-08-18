@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter Inauguration – ACM RIT</title>
+  <link rel="icon" type="image/png" href="acmrit-removebg-preview.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+      justify-content: center;
+    }
+    .meta-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .poster-wrap {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .poster-wrap img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.85;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .about-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .about-card p + p {
+      margin-top: 0.9rem;
+    }
+    /* Gallery */
+    .gallery-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+    .gallery {
+      columns: 3;
+      column-gap: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 0.8rem;
+      display: block;
+      transition: transform 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+      border-color: var(--accent);
+    }
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 88vh;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      color: var(--muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+    .lightbox-close:hover { color: var(--text); }
+    @media (max-width: 768px) {
+      .gallery { columns: 2; }
+    }
+    @media (max-width: 480px) {
+      .gallery { columns: 1; }
+      .poster-wrap img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="acmrit-removebg-preview.png" alt="ACM Logo" style="height:56px;width:56px;object-fit:contain;" />
+      <span>ACM <span style="color:var(--muted);font-weight:400;">RIT</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="join.html" class="nav-cta">Join Us</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+  
+    <h1>Chapter Inauguration &amp; Guest Lecture</h1>
+    <p style="max-width:none;">The official launch of the ACM RIT Student Chapter — where it all began.</p>
+  </div>
+
+  <section style="max-width:900px;margin:0 auto;">
+
+    <!-- Meta chips -->
+    <div class="event-meta fade-in">
+      <span class="meta-chip">📅 17th March 2026</span>
+      <span class="meta-chip">📍 Wozniak Auditorium, RIT Chennai</span>
+      <span class="meta-chip" style="color:var(--green);border-color:rgba(63,185,80,0.3);background:rgba(63,185,80,0.08);">✅ Completed</span>
+    </div>
+
+    <!-- Poster -->
+    <div class="poster-wrap fade-in">
+      <img src="ACM invitation_page-0001.jpg" alt="Chapter Inauguration Poster" />
+    </div>
+
+    <!-- About -->
+    <div class="about-card fade-in">
+      <h3>About the Event</h3>
+      <p>
+        On 17th March 2026, the ACM RIT Student Chapter was officially inaugurated at the Wozniak Auditorium, Rajalakshmi Institute of Technology, Chennai. The event marked a proud milestone for the student community, bringing together students, faculty, and a distinguished chief guest to celebrate the birth of the chapter.
+      </p>
+      <p>
+        The ceremony began with a warm felicitation of the chief guest, followed by a momentous occasion where the newly elected office bearers of the ACM RIT Student Chapter took their oath — formally committing to lead and grow the chapter with dedication and purpose.
+      </p>
+      <p>
+        The chief guest, who serves as the ACM Student Chapter Coordinator at VIT, then took the stage and shared her invaluable experience on how to build, grow, and sustain a thriving ACM Student Chapter. Drawing from her journey at VIT, she offered practical guidance and inspiration to the newly formed team at RIT.
+      </p>
+      <p>
+        She then delivered an engaging guest lecture on <strong style="color:var(--text);">Cyber Security</strong>, making the subject deeply relatable by connecting it to the smartphones we use every day. She walked the audience through how granting unrestricted app permissions silently exposes our personal data, and how everyday digital habits can become serious security vulnerabilities. Through real-life examples and interactive discussion, she brought the world of cyber security to life — leaving the audience with a sharper awareness of the digital risks around them.
+      </p>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="fade-in">
+      <div class="gallery-title">📸 Event Gallery</div>
+
+      <!-- Group Photos -->
+      <div style="display:flex;flex-direction:column;gap:0.8rem;margin-bottom:0.8rem;">
+        <img src="1.jpg" alt="Group photo 1" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+          <img src="2.jpg" alt="Group photo 2" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
+          <img src="3.jpg" alt="Group photo 3" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
+        </div>
+      </div>
+
+      <!-- Rest of photos -->
+      <div class="gallery">
+        <img src="4.jpg" alt="Event photo 4" onclick="openLightbox(this.src)" />
+        <img src="6.jpg" alt="Event photo 5" onclick="openLightbox(this.src)" />
+        <img src="7.jpg" alt="Event photo 6" onclick="openLightbox(this.src)" />
+        <img src="8.jpg" alt="Event photo 7" onclick="openLightbox(this.src)" />
+        <img src="9.jpg" alt="Event photo 8" onclick="openLightbox(this.src)" />
+        <img src="10.jpg" alt="Event photo 9" onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <a href="events.html" class="btn btn-outline">← Back to Events</a>
+    </div>
+
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="Event photo" onclick="event.stopPropagation()" />
+  </div>
+
+  <div class="cta-section fade-in" style="margin-top:80px;">
+    <h2>Want to Be Part of Our Next Event?</h2>
+    <p>Join ACM RIT to get early access and notifications for all upcoming events.</p>
+    <a href="join.html" class="btn btn-primary">Join Now →</a>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-weight:700;font-size:1.1rem;">ACM <span style="color:var(--accent);">RIT</span></div>
+        <p>ACM Student Chapter at Rajalakshmi Institute of Technology, Chennai.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:acm@ritchennai.edu.in">acm@ritchennai.edu.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ACM Student Chapter – Rajalakshmi Institute of Technology</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>
