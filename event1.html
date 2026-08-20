@@ -63,17 +63,18 @@
     }
     .gallery {
       columns: 3;
-      column-gap: 0.8rem;
+      column-gap: 0.6rem;
       margin-bottom: 2.5rem;
     }
     .gallery img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 0;
       border: 1px solid var(--border);
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       display: block;
       transition: transform 0.2s, border-color 0.2s;
       cursor: pointer;
+      break-inside: avoid;
     }
     .gallery img:hover {
       transform: scale(1.02);
@@ -176,19 +177,11 @@
 
     <!-- Photo Gallery -->
     <div class="fade-in">
-      <div class="gallery-title">📸 Event Gallery</div>
-
-      <!-- Group Photos -->
-      <div style="display:flex;flex-direction:column;gap:0.8rem;margin-bottom:0.8rem;">
-        <img src="1_1.jpg" alt="Group photo 1" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
-          <img src="1_2.jpg" alt="Group photo 2" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
-          <img src="1_3.jpg" alt="Group photo 3" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
-        </div>
-      </div>
-
-      <!-- Rest of photos -->
+      <div class="gallery-title">Event Gallery</div>
       <div class="gallery">
+        <img src="1_1.jpg" alt="Event photo 1" onclick="openLightbox(this.src)" />
+        <img src="1_2.jpg" alt="Event photo 2" onclick="openLightbox(this.src)" />
+        <img src="1_3.jpg" alt="Event photo 3" onclick="openLightbox(this.src)" />
         <img src="1_4.jpg" alt="Event photo 4" onclick="openLightbox(this.src)" />
         <img src="1_5.jpg" alt="Event photo 5" onclick="openLightbox(this.src)" />
         <img src="1_6.jpg" alt="Event photo 6" onclick="openLightbox(this.src)" />
