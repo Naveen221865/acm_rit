@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unlocking Tomorrow – ACM RIT</title>
+  <link rel="icon" type="image/png" href="acmrit-removebg-preview.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+      justify-content: center;
+    }
+    .meta-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.45rem 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .poster-wrap {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .poster-wrap img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .about-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.85;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    .about-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .about-card p + p { margin-top: 0.9rem; }
+    .gallery-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+    .gallery {
+      columns: 3;
+      column-gap: 0.8rem;
+      margin-bottom: 2.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 0.8rem;
+      display: block;
+      transition: transform 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+      border-color: var(--accent);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 88vh;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      color: var(--muted);
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+    .lightbox-close:hover { color: var(--text); }
+    @media (max-width: 768px) { .gallery { columns: 2; } }
+    @media (max-width: 480px) {
+      .gallery { columns: 1; }
+      .poster-wrap img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="acmrit-removebg-preview.png" alt="ACM Logo" style="height:56px;width:56px;object-fit:contain;" />
+      <span>ACM <span style="color:var(--muted);font-weight:400;">RIT</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="join.html" class="nav-cta">Join Us</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Unlocking Tomorrow: How AI and Deep Learning Shape Our World</h1>
+    <p style="max-width:none;">A guest lecture on the growing impact of AI and Deep Learning in shaping future technologies and industries.</p>
+  </div>
+
+  <section style="max-width:900px;margin:0 auto;">
+
+    <!-- Meta chips -->
+    <div class="event-meta fade-in">
+      <span class="meta-chip">In association with the Department of ECE, RIT Chennai</span>
+      <span class="meta-chip" style="color:var(--green);border-color:rgba(63,185,80,0.3);background:rgba(63,185,80,0.08);">Completed</span>
+    </div>
+
+    <!-- Poster -->
+    <div class="poster-wrap fade-in">
+      <img src="2_0.jpg" alt="Unlocking Tomorrow Event Poster" />
+    </div>
+
+    <!-- About -->
+    <div class="about-card fade-in">
+      <h3>About the Event</h3>
+      <p>
+        "Unlocking Tomorrow: How AI and Deep Learning Shape Our World" was an insightful guest lecture organized by the ACM RIT Student Chapter in association with the Department of Electronics and Communication Engineering (ECE), Rajalakshmi Institute of Technology. The event focused on the growing impact of Artificial Intelligence (AI) and Deep Learning and their role in shaping future technologies and industries.
+      </p>
+      <p>
+        The session featured <strong style="color:var(--text);">Mr. Suresh R. Rajagopal, Director – Global Technology &amp; AI Transformation</strong>, as the resource person. He shared valuable insights into emerging AI technologies, real-world applications, industry trends, and future opportunities for students in the field of AI and Deep Learning.
+      </p>
+      <p>
+        The lecture was actively attended by members of the ACM RIT Student Chapter and students from the ECE Department, providing participants with an opportunity to gain industry-oriented knowledge and understand the evolving landscape of AI.
+      </p>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="fade-in">
+      <div class="gallery-title">Event Gallery</div>
+
+      <!-- Featured photos -->
+      <div style="display:flex;flex-direction:column;gap:0.8rem;margin-bottom:0.8rem;">
+        <img src="2_1.jpg" alt="Event photo 1" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+          <img src="2_2.jpg" alt="Event photo 2" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
+          <img src="2_3.jpg" alt="Event photo 3" onclick="openLightbox(this.src)" style="width:100%;border-radius:10px;border:1px solid var(--border);cursor:pointer;transition:transform 0.2s,border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'" />
+        </div>
+      </div>
+
+      <!-- Rest of photos -->
+      <div class="gallery">
+        <img src="2_4.jpg" alt="Event photo 4" onclick="openLightbox(this.src)" />
+        <img src="2_5.jpg" alt="Event photo 5" onclick="openLightbox(this.src)" />
+        <img src="2_6.jpg" alt="Event photo 6" onclick="openLightbox(this.src)" />
+        <img src="2_7.jpg" alt="Event photo 7" onclick="openLightbox(this.src)" />
+        <img src="2_8.jpg" alt="Event photo 8" onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <a href="events.html" class="btn btn-outline">← Back to Events</a>
+    </div>
+
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="Event photo" onclick="event.stopPropagation()" />
+  </div>
+
+  <div class="cta-section fade-in" style="margin-top:80px;">
+    <h2>Want to Be Part of Our Next Event?</h2>
+    <p>Join ACM RIT to get early access and notifications for all upcoming events.</p>
+    <a href="join.html" class="btn btn-primary">Join Now →</a>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-weight:700;font-size:1.1rem;">ACM <span style="color:var(--accent);">RIT</span></div>
+        <p>ACM Student Chapter at Rajalakshmi Institute of Technology, Chennai.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:acm@ritchennai.edu.in">acm@ritchennai.edu.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ACM Student Chapter – Rajalakshmi Institute of Technology</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>
