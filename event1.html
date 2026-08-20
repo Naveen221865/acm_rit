@@ -32,7 +32,7 @@
     .poster-wrap img {
       max-width: 420px;
       width: 100%;
-      border-radius: 12px;
+      border-radius: 0;
       border: 1px solid var(--border);
     }
     .about-card {
@@ -94,7 +94,7 @@
     .lightbox img {
       max-width: 90vw;
       max-height: 88vh;
-      border-radius: 10px;
+      border-radius: 0;
       border: 1px solid var(--border);
     }
     .lightbox-close {
@@ -148,14 +148,14 @@
 
     <!-- Meta chips -->
     <div class="event-meta fade-in">
-      <span class="meta-chip">📅 17th March 2026</span>
-      <span class="meta-chip">📍 Wozniak Auditorium, RIT Chennai</span>
-      <span class="meta-chip" style="color:var(--green);border-color:rgba(63,185,80,0.3);background:rgba(63,185,80,0.08);">✅ Completed</span>
+      <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 17th March 2026</span>
+      <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Wozniak Auditorium, RIT Chennai</span>
+      <span class="meta-chip" style="color:var(--green);border-color:rgba(63,185,80,0.3);background:rgba(63,185,80,0.08);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="20 6 9 17 4 12"/></svg> Completed</span>
     </div>
 
     <!-- Poster -->
     <div class="poster-wrap fade-in">
-      <img src="1_0.jpg" alt="Chapter Inauguration Poster" />
+      <img src="1_0.jpg" alt="Chapter Inauguration Poster" onclick="openLightbox(this.src)" style="cursor:pointer;" />
     </div>
 
     <!-- About -->
@@ -177,7 +177,7 @@
 
     <!-- Photo Gallery -->
     <div class="fade-in">
-      <div class="gallery-title">Event Gallery</div>
+      <div class="gallery-title" style="display:flex;align-items:center;gap:0.6rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Event Gallery</div>
       <div class="gallery">
         <img src="1_1.jpg" alt="Event photo 1" onclick="openLightbox(this.src)" />
         <img src="1_2.jpg" alt="Event photo 2" onclick="openLightbox(this.src)" />
